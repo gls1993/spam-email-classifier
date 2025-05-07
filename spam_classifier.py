@@ -53,7 +53,6 @@ ham_check_count = vectorizer.transform(ham_check)
 print(model.predict(ham_check_count))
 
 
-
 # See how it performed
 print("\nHow did the model do?\n")
 print("Accuracy:", accuracy_score(y_test, y_pred))
@@ -61,3 +60,14 @@ print("Confusion Matrix:\n", confusion_matrix(y_test, y_pred))
 
 print("\nDetailed Breakdown (Precision, Recall, F1):")
 print("Classification Report:\n", classification_report(y_test, y_pred))
+
+# Take users input to check their email
+while True:
+    print("\nEnter an email to classify (or type 'exit' to quit):")
+    user_input = input(">> ")
+    if user_input.lower() == 'exit':
+        break
+
+    user_vector = vectorizer.transform([user_input])
+    prediction = model.predict(user_vector)
+    print(f"Prediction: {prediction[0].upper()}")
