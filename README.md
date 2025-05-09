@@ -49,6 +49,15 @@ Prediction: HAM
 
 ---
 
+## Example Output
+
+Below is an example of the model after training and classifying two sample emails:
+
+![Model Evaluation](images/model_eval.png)
+![Live Prediction](images/spam_live_test.png)
+![Live Prediction](images/ham_live_test.png)
+
+
 ## Notes
 
 - TF-IDF improves accuracy by downweighting common words.
