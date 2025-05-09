@@ -55,3 +55,14 @@ Prediction: HAM
 - Accuracy ~98%, confusion matrix + classification report included.
 
 ---
+
+##  Project Structure
+
+```
+/Spamclassifier/
+│
+├── spam_classifier.py   # Main script: loads data, trains model, runs predictions
+├── /data/
+│   └── emails.csv       # Dataset file (not included in GitHub)
+└── README.md            # Project overview and setup instructions
+```
